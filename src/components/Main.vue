@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <todo-header></todo-header>
-    <task-input></task-input>
+    <todo-header @addNewProject="add"></todo-header>
+    <task-input v-for="(item, index) of projectList" :key="index" @remove="removeSelf(index)"></task-input>
     <info-footer></info-footer>
   </div>
 </template>
@@ -16,6 +16,22 @@ export default {
     todoHeader,
     InfoFooter,
     TaskInput
+  },
+  data () {
+    return {
+      projectList: [0],
+      count: 0
+    }
+  },
+  methods: {
+    add () {
+      this.projectList.push(this.count += 1)
+    },
+    removeSelf (index) {
+      this.projectList = this.projectList.filter((val, num) => {
+        return num !== index
+      })
+    }
   }
 }
 </script>

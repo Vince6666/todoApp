@@ -1,13 +1,18 @@
 <template>
   <div class="title-container">
     <h1 class="title">todoApp</h1>
-    <span class="iconfont add-icon" title="add a new project">&#xe601;</span>
+    <span class="iconfont add-icon" title="add a new project" @click="addProject">&#xe601;</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'todoHeader'
+  name: 'todoHeader',
+  methods: {
+    addProject () {
+      this.$emit('addNewProject')
+    }
+  }
 }
 </script>
 

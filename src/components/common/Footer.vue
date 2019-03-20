@@ -1,8 +1,8 @@
 <template>
   <div>
     <p>Double-click to edit a todo</p>
-    <p>This app is refered to ...</p>
-    <p>Go to <a href="">vuejs.org</a></p>
+    <p>This app is refered to <a href="https://gitee.com/Vince6666/TodoApp">origin</a></p>
+    <p>Go to <a href="https://cn.vuejs.org/">vuejs.org</a></p>
   </div>
 </template>
 
@@ -24,5 +24,5 @@ export default {
         color: #ccc
         text-decoration: none
         &:hover
-          color: pink
+          color: rgba(175,47,47,0.5)
 </style>
