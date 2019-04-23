@@ -1,6 +1,6 @@
-# todoo
+# todo
 
-> A Vue.js project
+> A Vue.js simple project
 
 ## Build Setup
 
